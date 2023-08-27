@@ -51,7 +51,7 @@ if CLIENT then
 	SWEP.AlternativePos = Vector(0, 1.325, -0.801)
 	SWEP.AlternativeAng = Vector(0, 0, 0)
 		
-	SWEP.ShortDotPos = Vector(2.009, -5.844, 0.263)
+	SWEP.ShortDotPos = Vector(-4.401, 0, 0.88)
 	SWEP.ShortDotAng = Vector(0, 0, 0)
 	
 	SWEP.BackupSights = {["md_acog"] = {[1] = Vector(2.028, -5.613, -1.124), [2] = Vector(0, 0, 0)}}
@@ -68,12 +68,12 @@ if CLIENT then
 		["md_aimpoint"] = {model = "models/wystan/attachments/aimpoint.mdl", bone = "receiver", rel = "", pos = Vector(-0.29, 5.5, -6), angle = Angle(0, 0, -90), size = Vector(1, 1, 1)},
 		["md_eotech"] = {model = "models/wystan/attachments/2otech557sight.mdl", bone = "receiver", rel = "", pos = Vector(0.4, 16, -16),  angle = Angle(90, -90, 0), size = Vector(1.5, 1.5, 1.5)},
 		["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "receiver", rel = "", pos = Vector(-0.452, -2.556, -1.428), angle = Angle(0, 0, 0), size = Vector(0.75, 0.75, 0.75)},
-		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "receiver", pos = Vector(-0.042, 4.362, 0.1), angle = Angle(0, 0, 2), size = Vector(0.75, 0.75, 0.75)},
+		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "receiver", pos = Vector(0.1, 3.5, 2.5), angle = Angle(0, 0, -90), size = Vector(0.75, 0.75, 0.75)},
 		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "receiver", pos = Vector(-0, -0.2, 0), adjustment = {min = 1.25, max = 3.6, axis = "y", inverseOffsetCalc = true, preventedBy = {"md_anpeq15"}}, angle = Angle(180, 0, -90), size = Vector(0.5, 0.5, 0.5)},
 		["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "receiver", pos = Vector(-0.401, -3.291, -2.22), angle = Angle(0, 0, 0), size = Vector(1, 1, 1)},
-		["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "smdimport001receiver", pos = Vector(-0.225, 9.715, 3.15), angle = Angle(0, 90, 0), size = Vector(0.699, 0.699, 0.699)},
+		["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "receiver", pos = Vector(-0.225, 9.715, 3.15), angle = Angle(0, 90, 0), size = Vector(0.699, 0.699, 0.699)},
 		["md_bipod"] = {model = "models/wystan/attachments/bipod.mdl", bone = "receiver", pos = Vector(-0.011, 14.541, 0.441), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699)},
-		["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "receiver", pos = Vector(-0.35, -2.554, -1.627), angle = Angle(0, -90, 0), size = Vector(0.899, 0.899, 0.899)},
+		["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "receiver", pos = Vector(-0.35, 4.9, -6), angle = Angle(90, 0, -90), size = Vector(0.899, 0.899, 0.899)},
 		["md_nightforce_nxs"] = {model = "models/cw2/attachments/l96_scope.mdl", bone = "receiver", pos = Vector(-0.105, 3.852, 4.574), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
 	}
 	
@@ -140,9 +140,9 @@ SWEP.Primary.DefaultClip	= 30
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "ar2"
 
-SWEP.FireDelay = 0.075
-SWEP.FireSound = "CW_MP5_FIRE"
-SWEP.FireSoundSuppressed = "CW_MP5_FIRE_SUPPRESSED"
+SWEP.FireDelay = 0.05
+SWEP.FireSound = "CW_HK416D_FIRE"
+SWEP.FireSoundSuppressed = "CW_HK416D_FIRE_SUPPRESSED"
 SWEP.Recoil = 0.63
 
 SWEP.HipSpread = 0.035
