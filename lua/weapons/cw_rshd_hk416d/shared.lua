@@ -77,7 +77,7 @@ if CLIENT then
 		["md_nightforce_nxs"] = {model = "models/cw2/attachments/l96_scope.mdl", bone = "receiver", pos = Vector(-0.105, 3.852, 4.574), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
 	}
 	
-	--meow
+	
 
 	SWEP.LaserPosAdjust = {x = 1, y = 0, z = 0}
 	SWEP.LaserAngAdjust = {p = 2, y = 180, r = 0}
