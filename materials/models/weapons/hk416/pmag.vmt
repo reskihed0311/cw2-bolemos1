@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/hk416/pmag"
+	"$bumpmap" "models/weapons/hk416/pmag_norm"
+}

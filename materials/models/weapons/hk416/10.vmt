@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/hk416/10"
+	"$bumpmap" "models/weapons/hk416/10_norm"
+}
