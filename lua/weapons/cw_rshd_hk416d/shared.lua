@@ -1,7 +1,7 @@
 AddCSLuaFile()
 AddCSLuaFile("sh_sounds.lua")
 include("sh_sounds.lua")
-SWEP.UseHands = true 
+SWEP.UseHands = true
 
 if CLIENT then
 	SWEP.DrawCrosshair = false
@@ -15,12 +15,18 @@ if CLIENT then
 	SWEP.MuzzleEffect = "muzzleflash_smg"
 	SWEP.PosBasedMuz = false
 	SWEP.SnapToGrip = true
-	SWEP.Shell = "smallshell"
+	SWEP.Shell = "mediumshell"
 	SWEP.ShellScale = 0.7
 	SWEP.ShellOffsetMul = 1
 	SWEP.ShellPosOffset = {x = 2, y = 0, z = -3}
 	SWEP.ForeGripOffsetCycle_Reload = 0.8
 	SWEP.ForeGripOffsetCycle_Reload_Empty = 0.87
+
+	SWEP.ForeGripHoldPos = {
+		["ValveBiped.Bip01_L_Clavicle"] = { scale = Vector(1, 1, 1), pos = Vector(-1.907, 0.802, 0), angle = Angle(0, 0, 0) },
+		["ValveBiped.Bip01_L_Hand"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-50.243, -7.244, 80.385) }
+	}
+	
 	
 	SWEP.IronsightPos = Vector(-4.401, 0, 0.759)
 	SWEP.IronsightAng = Vector(0, 0, 0)
@@ -39,7 +45,10 @@ if CLIENT then
 	SWEP.AimpointPos = Vector(-4.401, 0, 0.88)
 	SWEP.AimpointAng = Vector(0, 0, 0)
 	
-	SWEP.ACOGPos = Vector(2.028, -5.613, -0.113)
+	SWEP.NXSPos = Vector(-4.401, 0, 1)
+	SWEP.NXSAng = Vector(0, 0, 0)
+
+	SWEP.ACOGPos = Vector(-4.401, 0, 0.65)
 	SWEP.ACOGAng = Vector(0, 0, 0)
 	
 	SWEP.SprintPos = Vector(4.444, -1, 0.082)
@@ -54,7 +63,6 @@ if CLIENT then
 	SWEP.ShortDotPos = Vector(-4.401, 0, 0.88)
 	SWEP.ShortDotAng = Vector(0, 0, 0)
 	
-	SWEP.BackupSights = {["md_acog"] = {[1] = Vector(2.028, -5.613, -1.124), [2] = Vector(0, 0, 0)}}
 
 	SWEP.LuaVMRecoilAxisMod = {vert = 1.5, hor = 3, roll = 1, forward = 1, pitch = 1}
 	SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
@@ -67,14 +75,13 @@ if CLIENT then
 	SWEP.AttachmentModelsVM = {
 		["md_aimpoint"] = {model = "models/wystan/attachments/aimpoint.mdl", bone = "receiver", rel = "", pos = Vector(-0.29, 5.5, -6), angle = Angle(0, 0, -90), size = Vector(1, 1, 1)},
 		["md_eotech"] = {model = "models/wystan/attachments/2otech557sight.mdl", bone = "receiver", rel = "", pos = Vector(0.4, 16, -16),  angle = Angle(90, -90, 0), size = Vector(1.5, 1.5, 1.5)},
-		["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "receiver", rel = "", pos = Vector(-0.452, -2.556, -1.428), angle = Angle(0, 0, 0), size = Vector(0.75, 0.75, 0.75)},
-		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "receiver", pos = Vector(0.1, 3.5, 2.5), angle = Angle(0, 0, -90), size = Vector(0.75, 0.75, 0.75)},
+		["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "receiver", rel = "", pos = Vector(-0.452, 5, -1.428), angle = Angle(0, 0, -90), size = Vector(0.75, 0.75, 0.75)},
+		["md_saker"] = {model = "models/cw2/attachments/556suppressor.mdl", bone = "receiver", pos = Vector(0, 3.55, 1.8), angle = Angle(0, 0, -90), size = Vector(0.75, 0.75, 0.75)},
 		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "receiver", pos = Vector(-0, -0.2, 0), adjustment = {min = 1.25, max = 3.6, axis = "y", inverseOffsetCalc = true, preventedBy = {"md_anpeq15"}}, angle = Angle(180, 0, -90), size = Vector(0.5, 0.5, 0.5)},
-		["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "receiver", pos = Vector(-0.401, -3.291, -2.22), angle = Angle(0, 0, 0), size = Vector(1, 1, 1)},
-		["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "receiver", pos = Vector(-0.225, 9.715, 3.15), angle = Angle(0, 90, 0), size = Vector(0.699, 0.699, 0.699)},
-		["md_bipod"] = {model = "models/wystan/attachments/bipod.mdl", bone = "receiver", pos = Vector(-0.011, 14.541, 0.441), angle = Angle(0, 0, 0), size = Vector(0.699, 0.699, 0.699)},
+		["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "receiver", pos = Vector(-0.32, 5.5, -4), angle = Angle(0, 0, -90), size = Vector(1, 1, 1)},
+		["md_anpeq15"] = {model = "models/cw2/attachments/anpeq15.mdl", bone = "receiver", pos = Vector(-0, 0, 8), angle = Angle(-90, -90, 180), size = Vector(0.699, 0.699, 0.699)},
 		["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "receiver", pos = Vector(-0.35, 4.9, -6), angle = Angle(90, 0, -90), size = Vector(0.899, 0.899, 0.899)},
-		["md_nightforce_nxs"] = {model = "models/cw2/attachments/l96_scope.mdl", bone = "receiver", pos = Vector(-0.105, 3.852, 4.574), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
+		["md_nightforce_nxs"] = {model = "models/cw2/attachments/l96_scope.mdl", bone = "receiver", pos = Vector(-0.1, -1.2, 0.7), angle = Angle(90, -90, 0), size = Vector(1, 1, 1)},
 	}
 	
 	
@@ -92,7 +99,7 @@ SWEP.LuaViewmodelRecoil = true
 
 SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -600}, atts = {"md_microt1", "md_eotech", "md_aimpoint", "md_schmidt_shortdot", "md_acog", "md_nightforce_nxs"}},
 	[2] = {header = "Barrel", offset = {300, -600}, atts = {"md_saker"}},
-	[3] = {header = "Handguard", offset = {-400, -100}, atts = {"md_foregrip", "md_bipod"}},
+	[3] = {header = "Handguard", offset = {-400, -100}, atts = {"md_foregrip"}},
 	[4] = {header = "Rail", offset = {250, 300}, atts = {"md_anpeq15"}},
 	["+reload"] = {header = "Ammo", offset = {900, 0}, atts = {"am_magnum", "am_matchgrade"}}}
 
