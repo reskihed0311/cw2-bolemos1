@@ -4,12 +4,18 @@ include("sh_sounds.lua")
 
 if CLIENT then
     SWEP.UseHands = true
+	
+	SWEP.SelectIcon = surface.GetTextureID("vgui/entities/cwr_qbz03")
+	killicon.Add( "cwr_qbz03", "vgui/entities/cwr_qbz03", Color(255, 0, 0, 0))
 	SWEP.DrawCrosshair = false
 	SWEP.PrintName = "QBZ-03"
 	SWEP.CSMuzzleFlashes = true
 	SWEP.ViewModelMovementScale = 1.15
 	SWEP.SnapToGrip = true
     SWEP.ForgripOverride = true	
+	
+    SWEP.AlternativePos = Vector(0, 0, 0)
+    SWEP.AlternativeAng = Vector(0, 0, 0)
 	
 	SWEP.MuzzleEffect = "muzzleflash_6"
 	SWEP.PosBasedMuz = false
@@ -105,7 +111,7 @@ SWEP.Sounds = {draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
 	[5] = {time = 2.42, sound = "CW_QBZ03_BOLTFWD"}},
 }
 
-SWEP.SpeedDec = 30
+SWEP.SpeedDec = 10
 
 SWEP.Slot = 2
 SWEP.SlotPos = 0
