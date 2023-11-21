@@ -5,7 +5,7 @@ include("sh_sounds.lua")
 if CLIENT then
     SWEP.UseHands = true
 	SWEP.DrawCrosshair = false
-	SWEP.PrintName = "QBZ-03"
+	SWEP.PrintName = "USP-45"
 	SWEP.CSMuzzleFlashes = true
 	SWEP.ViewModelMovementScale = 1.15
 	SWEP.SnapToGrip = true
@@ -13,8 +13,8 @@ if CLIENT then
 	
 	SWEP.MuzzleEffect = "muzzleflash_6"
 	SWEP.PosBasedMuz = false
-	SWEP.Shell = "rifleshell"
-	SWEP.ShellScale = 1
+	SWEP.Shell = "smallshell"
+	SWEP.ShellScale = 0.7
 	SWEP.ShellOffsetMul = 0
 	SWEP.ShellPosOffset = {x = 0, y = 0, z = 0}
 
@@ -51,6 +51,9 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -600}, atts = {""}},
 	
 
 SWEP.Animations = {fire = "fire",
+	fire_aim = "fire",
+	fire_last = "fire_empty",
+	fire_last_aim = "fire_empty",
 	reload = "reload",
 	reload_empty = "reload_empty",
 	holster = "holster",
@@ -58,14 +61,16 @@ SWEP.Animations = {fire = "fire",
 	draw = "draw"}
 	
 	SWEP.ReloadViewBobEnabled = true
+	SWEP.ADSFireAnim = true
 	
 SWEP.Sounds = {draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
 
-	reload = {[1] = {time = 0.15, sound = "CW_QBZ03_MAGOUT"},
-	[2] = {time = 1, sound = "CW_QBZ03_MAGIN"},
-	[3] = {time = 1.15, sound = "CW_QBZ03_MAGHIT"}},
+	reload = {[1] = {time = 0.15, sound = "CW_USP45_MAGREL"},
+	[2] = {time = 0.20, sound = "CW_USP45_MAGOUT"},
+	[3] = {time = 0.95, sound = "CW_USP45_MAGIN"},
+	[4] = {time = 1.15, sound = "CW_USP45_MAGHIT"}},
 	
-	reload_empty = {[1] = {time = 0.15, sound = "CW_QBZ03_MAGOUT"},
+	reload_empty = {[1] = {time = 0.15, sound = "CW_USP45_MAGREL"},
 	[2] = {time = 0.20, sound = "CW_USP45_MAGOUT"},
 	[3] = {time = 0.95, sound = "CW_USP45_MAGIN"},
 	[4] = {time = 1.15, sound = "CW_USP45_MAGHIT"},
@@ -82,7 +87,25 @@ SWEP.FireModes = {"semi"}
 SWEP.Base = "cw_base"
 SWEP.Category = "CW 2.0 - Bôlemos"
 
+function SWEP:fireAnimFunc()
+	clip = self:Clip1()
+	cycle = 0
+	rate = 1.1
+	anim = "safe"
+	prefix = ""
+	suffix = ""
+	
+		if clip == 1 then
+		suffix = suffix .. "_last"
+	end
 
+	if self:isAiming() then
+		suffix = suffix .. "_aim"
+		cycle = self.ironFireAnimStartCycle
+	end
+	
+	self:sendWeaponAnim(prefix .. "fire" .. suffix, rate, cycle)
+end //*/
 
 SWEP.Author			= "reshed / niborhn"
 SWEP.Contact		= ""
@@ -91,8 +114,8 @@ SWEP.Instructions	= ""
 
 SWEP.ViewModelFOV	= 54
 SWEP.ViewModelFlip	= false
-SWEP.ViewModel		= "models/bolemos/cw_reshed_qbz03.mdl"
-SWEP.WorldModel		= "models/weapons/w_rif_galil.mdl"
+SWEP.ViewModel		= "models/bolemos/reshed_usp.mdl"
+SWEP.WorldModel		= "models/weapons/w_pist_usp.mdl"
 
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
