@@ -42,43 +42,11 @@ if CLIENT then
 
 	
 	}
-		SWEP.ForegripOverridePos = {
-		["md_eft_fg_afg_blk"] = {
-			weakOverride = true, -- weak override - will not use these coords if any of the other (foregrip/m203) attachments are active
-    ["ValveBiped.Bip01_L_UpperArm"] = { scale = Vector(1, 1, 1), pos = Vector(0.404, 0.632, 5.311), angle = Angle(0, 0, 0) },
-	["ValveBiped.Bip01_L_Finger01"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, -12.341, 0) },
-	["ValveBiped.Bip01_L_Hand"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-0.029, -44.881, -53.27) },
-	["ValveBiped.Bip01_L_Finger0"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(35.171, -20.844, 0) }
-
-
-		},
-		
-		["md_eft_fg_rvg"] = {
-			weakOverride = true, -- weak override - will not use these coords if any of the other (foregrip/m203) attachments are active
-			["ValveBiped.Bip01_L_Clavicle"] = { scale = Vector(1, 1, 1), pos = Vector(-.2, 1, .2), angle = Angle(0, 0, 0) },
-			["ValveBiped.Bip01_L_Finger0"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(5, 3.25, 0) },
-			["ValveBiped.Bip01_L_Finger01"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 1, 0) },
-			["ValveBiped.Bip01_L_Finger02"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) }
-		}
-	}
 	
 	
-
-
-
-
+	
 	
 	SWEP.AttachmentModelsVM = {
-		["md_eft_si_rmr"] = { type = "Model", model = "models/weapons/cw_eft/upgrades/scopes/compact/rmr/v_rmr.mdl", bone = "body", rel = "", pos = Vector(0, 0, 2.035), angle = Angle(90, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["md_eft_si_romeo"] = { type = "Model", model = "models/weapons/cw_eft/upgrades/scopes/compact/romeo/v_romeo.mdl", bone = "body", rel = "", pos = Vector(0, 0, 2.035), angle = Angle(90, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-        ["md_eft_si_uh1"] = { type = "Model", model = "models/weapons/cw_eft/upgrades/scopes/uh1/v_uh1.mdl", bone = "body", rel = "", pos = Vector(0, 0, 2.035), angle = Angle(90, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["md_anpeq15"] = { type = "Model", model = "models/cw2/attachments/anpeq15.mdl", bone = "body", rel = "", pos = Vector(-0.18, 0.057, 10.883), angle = Angle(-90, 0, -90), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-
-
-		["md_foregrip"] =  { type = "Model", model = "models/wystan/attachments/foregrip1.mdl", bone = "body", rel = "", pos = Vector(0, 5.888, -0.518), angle = Angle(0, 0, -90), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["md_eft_fg_afg_blk"] =  { type = "Model", model = "models/weapons/cw_eft/upgrades/foregrips/afg/v_afg_blk.mdl", bone = "body", rel = "", pos = Vector(0, 3.592, 11.84), angle = Angle(90, -90, 0), size = Vector(0.449, 0.449, 0.449), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		
-		["md_eft_sil_osprey9"] = { type = "Model", model = "models/weapons/cw_eft/upgrades/silencers/osprey/v_osprey.mdl", bone = "body", rel = "", pos = Vector(0, 2.351, 15.652), angle = Angle(90, -90, 0), size = Vector(1.2, 1.2, 1.2), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
 	}
 	
 	
@@ -96,10 +64,10 @@ SWEP.LuaViewmodelRecoil = true
 SWEP.LuaViewmodelRecoilOverride = true
 SWEP.FullAimViewmodelRecoil = false
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -600}, atts = {"md_eft_si_rmr", "md_eft_si_romeo", "md_eft_si_uh1"}},
-    [2] = {header = "Underbarrel", offset = {0, 250}, atts = {"md_foregrip", "md_eft_fg_afg_blk"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -600}, atts = {""}},
+    [2] = {header = "Underbarrel", offset = {0, 250}, atts = {"md_foregrip"}},
     [3] = {header = "Tactical - Top", offset = {0, -500}, atts = {"md_anpeq15"}},
-    [4] = {header = "Muzzle", offset = {-400, -250}, atts = {"md_eft_sil_osprey9"}},
+    [4] = {header = "Muzzle", offset = {-400, -250}, atts = {""}},
 	["+reload"] = {header = "Ammo", offset = {900, 0}, atts = {"am_magnum", "am_matchgrade"}}}
 	
 

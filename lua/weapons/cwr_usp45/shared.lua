@@ -24,8 +24,6 @@ if CLIENT then
 	SWEP.IronsightAng = Vector(0, 0, 0)
 	
     SWEP.AttachmentModelsVM = {
-	["md_eft_sil_osprey9"] = { type = "Model", model = "models/weapons/cw_eft/upgrades/silencers/osprey/v_osprey.mdl", bone = "Body", rel = "", pos = Vector(0, 0.493, 6.257), angle = Angle(90, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	["md_insight_x2"] = { type = "Model", model = "models/cw2/attachments/pistollaser.mdl", bone = "Body", rel = "", pos = Vector(0, 1.527, 2.98), angle = Angle(-90, 0, -90), size = Vector(0.165, 0.165, 0.165), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
 }
 
 
@@ -46,9 +44,9 @@ SWEP.LuaViewmodelRecoil = true
 SWEP.LuaViewmodelRecoilOverride = true
 SWEP.FullAimViewmodelRecoil = false
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -600}, atts = {"md_eft_si_rmr"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -600}, atts = {""}},
     [2] = {header = "Tactical", offset = {0, -500}, atts = {"md_insight_x2"}},
-    [3] = {header = "Muzzle", offset = {-400, -250}, atts = {"md_eft_sil_osprey9"}},
+    [3] = {header = "Muzzle", offset = {-400, -250}, atts = {""}},
 	["+reload"] = {header = "Ammo", offset = {900, 0}, atts = {"am_magnum", "am_matchgrade"}}}
 	
 
