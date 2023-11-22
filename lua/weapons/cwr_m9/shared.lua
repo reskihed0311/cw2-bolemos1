@@ -131,14 +131,14 @@ SWEP.WorldModel		= "models/weapons/w_pist_elite_single.mdl"
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
-SWEP.Primary.ClipSize		= 12
-SWEP.Primary.DefaultClip	= 12
+SWEP.Primary.ClipSize		= 15
+SWEP.Primary.DefaultClip	= 15
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= "pistol"
 
 SWEP.FireDelay = 0.15
-SWEP.FireSound = "CW_USP45_FIRE"
-SWEP.FireSoundSuppressed = "CW_USP45_FIRE_SUPPRESSED"
+SWEP.FireSound = "CW_M9FS_FIRE"
+SWEP.FireSoundSuppressed = "CW_M9FS_FIRE_SUPPRESSED"
 SWEP.Recoil = 1.05
 
 SWEP.HipSpread = 0.045
