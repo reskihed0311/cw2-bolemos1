@@ -1,17 +1,13 @@
-"VertexLitGeneric"
+"VertexlitGeneric"
 {
-	"$basetexture" "models\weapons\reshed\usp45\USP_D"
-	"$bumpmap" "models\weapons\reshed\usp45\USP_N"
-	"$phongexponenttexture" "models\weapons\reshed\usp45\USP_M"
-	
-	"$metal" "1"
-	"$roughnessmultiplier" "1"
-	
-	"$fuzz" "1"
-	"$fuzzmultiplier" ".2"
-	
-	"$envmap" "models\shared\envmap_unfuck"
-	"$srgbtint" "[1.5 1.5 1.5]"
-	
-	"$nocull" "1"
+	"$basetexture" "models/weapons/reshed/usp45/usp_d"
+	"$bumpmap" "models/weapons/reshed/usp45/usp_n"
+	"$envmap" "env_cubemap"
+	"$normalmapalphaenvmapmask" "1"
+	"$phong" "1"
+	"$phongexponent" "4"
+	"$phongboost"	"0.5"
+	"$phongfresnelranges"	"[1 1 1]"
+	"$envmaptint" "[0.05 0.05 0.05]"
 }
+

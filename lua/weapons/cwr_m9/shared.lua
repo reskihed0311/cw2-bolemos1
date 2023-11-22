@@ -5,7 +5,7 @@ include("sh_sounds.lua")
 if CLIENT then
     SWEP.UseHands = true
 	SWEP.DrawCrosshair = false
-	SWEP.PrintName = "USP-45"
+	SWEP.PrintName = "Berreta M9FS"
 	SWEP.CSMuzzleFlashes = true
 	SWEP.ViewModelMovementScale = 1.15
 	SWEP.SnapToGrip = true
@@ -20,7 +20,7 @@ if CLIENT then
 
 	
 	
-	SWEP.IronsightPos = Vector(-4.361, 0, 1.879)
+	SWEP.IronsightPos = Vector(-3.8, 0, 2.119)
 	SWEP.IronsightAng = Vector(0, 0, 0)
 	
     SWEP.AttachmentModelsVM = {
@@ -65,16 +65,16 @@ SWEP.Animations = {fire = "fire",
 	
 SWEP.Sounds = {draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
 
-	reload = {[1] = {time = 0.15, sound = "CW_USP45_MAGREL"},
-	[2] = {time = 0.20, sound = "CW_USP45_MAGOUT"},
-	[3] = {time = 0.95, sound = "CW_USP45_MAGIN"},
-	[4] = {time = 1.15, sound = "CW_USP45_MAGHIT"}},
+	reload = {
+	[1] = {time = 0.25, sound = "CW_M9FS_MAGOUT"},
+	[2] = {time = 1, sound = "CW_M9FS_MAGHIT"},
+	[3] = {time = 1.10, sound = "CW_M9FS_MAGIN"}},
 	
-	reload_empty = {[1] = {time = 0.15, sound = "CW_USP45_MAGREL"},
-	[2] = {time = 0.20, sound = "CW_USP45_MAGOUT"},
-	[3] = {time = 0.95, sound = "CW_USP45_MAGIN"},
-	[4] = {time = 1.15, sound = "CW_USP45_MAGHIT"},
-	[5] = {time = 1.38, sound = "CW_USP45_SLIDEREL"}},
+	reload_empty = {
+	[1] = {time = 0.25, sound = "CW_M9FS_MAGOUT"},
+	[2] = {time = 1.45, sound = "CW_M9FS_MAGHIT"},
+	[3] = {time = 1.55, sound = "CW_M9FS_MAGIN"},
+	[4] = {time = 1.82, sound = "CW_M9FS_SLIDEREL"}},
 }
 
 SWEP.SpeedDec = 30
@@ -112,10 +112,10 @@ SWEP.Contact		= ""
 SWEP.Purpose		= ""
 SWEP.Instructions	= ""
 
-SWEP.ViewModelFOV	= 54
+SWEP.ViewModelFOV	= 70
 SWEP.ViewModelFlip	= false
-SWEP.ViewModel		= "models/bolemos/reshed_usp.mdl"
-SWEP.WorldModel		= "models/weapons/w_pist_usp.mdl"
+SWEP.ViewModel		= "models/bolemos/reshed_m9fs.mdl"
+SWEP.WorldModel		= "models/weapons/w_pist_elite_single.mdl"
 
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
@@ -123,7 +123,7 @@ SWEP.AdminSpawnable		= true
 SWEP.Primary.ClipSize		= 12
 SWEP.Primary.DefaultClip	= 12
 SWEP.Primary.Automatic		= false
-SWEP.Primary.Ammo			= ".45 ACP"
+SWEP.Primary.Ammo			= "pistol"
 
 SWEP.FireDelay = 0.15
 SWEP.FireSound = "CW_USP45_FIRE"
@@ -142,8 +142,8 @@ SWEP.DeployTime = 0.6
 
 SWEP.ReloadSpeed = 1
 SWEP.ReloadEmptySpeed = 1
-SWEP.ReloadTime = 1.65
-SWEP.ReloadTime_Empty = 1.65
-SWEP.ReloadHalt = 1.6
-SWEP.ReloadHalt_Empty = 1.9
+SWEP.ReloadTime = 2.8
+SWEP.ReloadTime_Empty = 2
+SWEP.ReloadHalt = 2.8
+SWEP.ReloadHalt_Empty = 2
 SWEP.SnapToIdlePostReload = true

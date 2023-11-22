@@ -11,19 +11,29 @@ if CLIENT then
 	SWEP.SnapToGrip = true
     SWEP.ForgripOverride = true	
 	
+	SWEP.SelectIcon = surface.GetTextureID("vgui/entities/cwr_usp45")
+	killicon.Add( "cwr_usp45", "vgui/entities/cwr_usp45", Color(255, 0, 0, 0))
+	
 	SWEP.MuzzleEffect = "muzzleflash_6"
 	SWEP.PosBasedMuz = false
 	SWEP.Shell = "smallshell"
-	SWEP.ShellScale = 0.7
-	SWEP.ShellOffsetMul = 0
-	SWEP.ShellPosOffset = {x = 0, y = 0, z = 0}
+	SWEP.ShellScale = 1
 
 	
 	
-	SWEP.IronsightPos = Vector(-4.361, 0, 1.879)
+	SWEP.IronsightPos = Vector(-4.361, -9.764, 1.919)
 	SWEP.IronsightAng = Vector(0, 0, 0)
 	
+	SWEP.RMRPos = Vector(-4.361, 0, 1.36)
+	SWEP.RMRAng = Vector(0, 0, 0)
+	
     SWEP.AttachmentModelsVM = {
+	["md_rmr"] = { type = "Model", model = "models/cw2/attachments/pistolholo.mdl", bone = "Slide", rel = "", pos = Vector(-0.443, 5.836, -8.836), angle = Angle(90, 0, -90), size = Vector(1.049, 1.049, 1.049), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+    ["md_insight_x2"] = { type = "Model", model = "models/cw2/attachments/pistollaser.mdl", bone = "Body", rel = "", pos = Vector(0, 1.508, 2.401), angle = Angle(-90, 0, -90), size = Vector(0.202, 0.202, 0.202), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+	["md_cobram2"] = { type = "Model", model = "models/cw2/attachments/cobra_m2.mdl", bone = "Body", rel = "", pos = Vector(0, 0.479, 10.22), angle = Angle(-90, 90, 0), size = Vector(1.208, 1.208, 1.208), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
+
+
+
 }
 
 
@@ -44,9 +54,9 @@ SWEP.LuaViewmodelRecoil = true
 SWEP.LuaViewmodelRecoilOverride = true
 SWEP.FullAimViewmodelRecoil = false
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -600}, atts = {""}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -600}, atts = {"md_rmr"}},
     [2] = {header = "Tactical", offset = {0, -500}, atts = {"md_insight_x2"}},
-    [3] = {header = "Muzzle", offset = {-400, -250}, atts = {""}},
+    [3] = {header = "Muzzle", offset = {-400, -250}, atts = {"md_cobram2"}},
 	["+reload"] = {header = "Ammo", offset = {900, 0}, atts = {"am_magnum", "am_matchgrade"}}}
 	
 
@@ -65,19 +75,20 @@ SWEP.Animations = {fire = "fire",
 	
 SWEP.Sounds = {draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
 
-	reload = {[1] = {time = 0.15, sound = "CW_USP45_MAGREL"},
-	[2] = {time = 0.20, sound = "CW_USP45_MAGOUT"},
-	[3] = {time = 0.95, sound = "CW_USP45_MAGIN"},
-	[4] = {time = 1.15, sound = "CW_USP45_MAGHIT"}},
+	reload = {
+	[1] = {time = 0.15, sound = "CW_USP45_MAGOUT"},
+	[2] = {time = 0.92, sound = "CW_USP45_MAGHALF"},
+	[3] = {time = 1.15, sound = "CW_USP45_MAGIN"}},
 	
-	reload_empty = {[1] = {time = 0.15, sound = "CW_USP45_MAGREL"},
-	[2] = {time = 0.20, sound = "CW_USP45_MAGOUT"},
-	[3] = {time = 0.95, sound = "CW_USP45_MAGIN"},
-	[4] = {time = 1.15, sound = "CW_USP45_MAGHIT"},
-	[5] = {time = 1.38, sound = "CW_USP45_SLIDEREL"}},
+	reload_empty = {
+	[1] = {time = 0.10, sound = "CW_USP45_MAGOUT"},
+	[2] = {time = 0.50, sound = "CW_USP45_MAGDROP"},
+	[3] = {time = 0.90, sound = "CW_USP45_MAGHALF"},
+	[4] = {time = 1.10, sound = "CW_USP45_MAGIN"},
+	[5] = {time = 1.40, sound = "CW_USP45_SLIDEREL"}},
 }
 
-SWEP.SpeedDec = 30
+SWEP.SpeedDec = 5
 
 SWEP.Slot = 1
 SWEP.SlotPos = 0
@@ -123,7 +134,7 @@ SWEP.AdminSpawnable		= true
 SWEP.Primary.ClipSize		= 12
 SWEP.Primary.DefaultClip	= 12
 SWEP.Primary.Automatic		= false
-SWEP.Primary.Ammo			= ".45 ACP"
+SWEP.Primary.Ammo			= "pistol"
 
 SWEP.FireDelay = 0.15
 SWEP.FireSound = "CW_USP45_FIRE"

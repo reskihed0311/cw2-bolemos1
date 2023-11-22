@@ -1,6 +1,12 @@
-"VertexLitGeneric"
+"VertexlitGeneric"
 {
-	$basetexture models\weapons\reshed\qbz03\T_1P_QBZ03_D"
-	$bumpmap "models\weapons\reshed\qbz03\T_1P_QBZ03_N"
-	$phongexponenttexture "models\weapons\reshed\qbz03\T_1P_QBZ03_M"
+	"$basetexture" "models\weapons\reshed\qbz03\T_1P_QBZ03_D"
+	"$bumpmap" "models\weapons\reshed\qbz03\T_1P_QBZ03_N"
+	"$envmap" "env_cubemap"
+	"$normalmapalphaenvmapmask" "1"
+	"$phong" "1"
+	"$phongexponent" "1"
+	"$phongboost"	"0"
+	"$phongfresnelranges"	"[1 1 1]"
+	"$envmaptint" "[0.01 0.01 0.01]"
 }
