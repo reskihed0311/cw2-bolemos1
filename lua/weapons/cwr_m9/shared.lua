@@ -17,13 +17,24 @@ if CLIENT then
 	SWEP.ShellScale = 0.7
 	SWEP.ShellOffsetMul = 0
 	SWEP.ShellPosOffset = {x = 0, y = 0, z = 0}
-
+	SWEP.SightWithRail = true
 	
+	SWEP.SelectIcon = surface.GetTextureID("vgui/entities/cwr_m9")
+	killicon.Add( "cwr_m9", "vgui/entities/cwr_m9", Color(255, 0, 0, 0))
+
+	SWEP.RMRPos = Vector(-3.84, 0, 1.2)
+	SWEP.RMRAng = Vector(0, 0, 0)
 	
 	SWEP.IronsightPos = Vector(-3.8, 0, 2.119)
 	SWEP.IronsightAng = Vector(0, 0, 0)
 	
     SWEP.AttachmentModelsVM = {
+	["md_rmr"] = { type = "Model", model = "models/cw2/attachments/pistolholo.mdl", bone = "gun", rel = "", pos = Vector(-0.39, 5.169, -3.816), angle = Angle(90, -90, 0), size = Vector(0.973, 0.973, 0.973), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+
+	["md_rail"] = { type = "Model", model = "models/cw2/attachments/pistolrail.mdl", bone = "gun", rel = "", pos = Vector(0, 2.522, 0.528), angle = Angle(-90, 90, 0), size = Vector(0.175, 0.175, 0.175), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+	["md_tundra9mm"] = { type = "Model", model = "models/cw2/attachments/9mmsuppressor.mdl", bone = "gun", rel = "", pos = Vector(0, 1.389, 9.18), angle = Angle(180, 0, -90), size = Vector(0.856, 0.856, 0.856), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
+
+
 }
 
 
@@ -44,9 +55,8 @@ SWEP.LuaViewmodelRecoil = true
 SWEP.LuaViewmodelRecoilOverride = true
 SWEP.FullAimViewmodelRecoil = false
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -600}, atts = {""}},
-    [2] = {header = "Tactical", offset = {0, -500}, atts = {"md_insight_x2"}},
-    [3] = {header = "Muzzle", offset = {-400, -250}, atts = {""}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -600}, atts = {"md_rmr"}},
+    [2] = {header = "Muzzle", offset = {-400, -250}, atts = {"md_tundra9mm"}},
 	["+reload"] = {header = "Ammo", offset = {900, 0}, atts = {"am_magnum", "am_matchgrade"}}}
 	
 
@@ -72,9 +82,10 @@ SWEP.Sounds = {draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
 	
 	reload_empty = {
 	[1] = {time = 0.25, sound = "CW_M9FS_MAGOUT"},
-	[2] = {time = 1.45, sound = "CW_M9FS_MAGHIT"},
-	[3] = {time = 1.55, sound = "CW_M9FS_MAGIN"},
-	[4] = {time = 1.82, sound = "CW_M9FS_SLIDEREL"}},
+	[2] = {time = 0.80, sound = "shared/mag/mag_pistol.wav"},
+	[3] = {time = 1.45, sound = "CW_M9FS_MAGHIT"},
+	[4] = {time = 1.55, sound = "CW_M9FS_MAGIN"},
+	[5] = {time = 1.82, sound = "CW_M9FS_SLIDEREL"}},
 }
 
 SWEP.SpeedDec = 30
