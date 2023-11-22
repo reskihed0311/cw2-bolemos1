@@ -24,25 +24,18 @@ if CLIENT then
 	SWEP.ShellOffsetMul = 0
 	SWEP.ShellPosOffset = {x = 0, y = 0, z = 0}
 
-	SWEP.ForeGripHoldPos =
-	{
-	["ValveBiped.Bip01_L_UpperArm"] = { scale = Vector(1, 1, 1), pos = Vector(-0.68, -3.705, 1.302), angle = Angle(0, 0, 0) },
-	["ValveBiped.Bip01_L_Finger22"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, -34.124, 0) },
-	["ValveBiped.Bip01_L_Finger42"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, -56.294, 0) },
-	["ValveBiped.Bip01_L_Finger32"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, -65.543, 0) },
-	["ValveBiped.Bip01_L_Finger12"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(8.104, -60.697, -1.566) },
-	["ValveBiped.Bip01_L_Hand"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-62.482, -3.014, 70.443) },
-	["ValveBiped.Bip01_L_Finger0"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-35.416, 0, 0) }
-}
-
+	
     SWEP.ForeGripOffsetCycle_Reload = 0.8
 	SWEP.ForeGripOffsetCycle_Reload_Empty = 0.5
 	
-	SWEP.IronsightPos = Vector(-4.841, -9.103, 0.959)
+	SWEP.IronsightPos = Vector(-4.801, 0, 0.959)
 	SWEP.IronsightAng = Vector(0, 0, 0)
 	
 	SWEP.AimpointPos = Vector(-4.921, 0, -0.401)
 	SWEP.AimpointAng = Vector(0, 0, 0)
+	
+	SWEP.KobraPos = Vector(-4.841, 0, -0.08)
+	SWEP.KobraAng = Vector(0 , 0, 0)
 
 	SWEP.ACOGPos = Vector(-4.841, -5, -0.64)
 	SWEP.ACOGAng = Vector(0, 0, 0)
@@ -96,13 +89,13 @@ SWEP.Animations = {fire = "fire",
 	
 SWEP.Sounds = {draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
 
-	reload = {[1] = {time = 0.15, sound = "CW_AKS74U_MAGOUT"},
-	[2] = {time = 1.22, sound = "CW_AKS74U_MAGIN"}},
+	reload = {[1] = {time = 0.20, sound = "CW_AKS74U_MAGOUT"},
+	[2] = {time = 1.28, sound = "CW_AKS74U_MAGIN"}},
 	
-	reload_empty = {[1] = {time = 0.15, sound = "CW_AKS74U_MAGOUT"},
-	[2] = {time = 1.22, sound = "CW_AKS74U_MAGIN"},
+	reload_empty = {[1] = {time = 0.20, sound = "CW_AKS74U_MAGOUT"},
+	[2] = {time = 1.28, sound = "CW_AKS74U_MAGIN"},
 	[3] = {time = 1.90, sound = "CW_AKS74U_BOLTBACK"},
-	[4] = {time = 2, sound = "CW_AKS74U_BOLTFWD"}},
+	[4] = {time = 2.05, sound = "CW_AKS74U_BOLTFWD"}},
 }
 
 SWEP.SpeedDec = 10
@@ -122,7 +115,7 @@ SWEP.Contact		= ""
 SWEP.Purpose		= ""
 SWEP.Instructions	= ""
 
-SWEP.ViewModelFOV	= 70
+SWEP.ViewModelFOV	= 60
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/bolemos/reshed_aks74u.mdl"
 SWEP.WorldModel		= "models/weapons/w_rif_ak47.mdl"
