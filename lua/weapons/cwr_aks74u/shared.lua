@@ -55,11 +55,8 @@ if CLIENT then
  	SWEP.EoTechAng = Vector(0, 0, 0)
 	
     SWEP.AttachmentModelsVM = {
-	["md_eotech"] = { type = "Model", model = "models/wystan/attachments/2otech557sight.mdl", bone = "body", rel = "", pos = Vector(0.342, 14.468, -14.162), angle = Angle(90, 0, -90), size = Vector(1.416, 1.416, 1.416), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	["md_foregrip"] = { type = "Model", model = "models/wystan/attachments/foregrip1.mdl", bone = "body", rel = "", pos = Vector(-0.667, 5.604, 0), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	["md_saker"] = { type = "Model", model = "models/cw2/attachments/556suppressor.mdl", bone = "body", rel = "", pos = Vector(0, 4.093, 3.744), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	["md_acog"] = { type = "Model", model = "models/wystan/attachments/2cog.mdl", bone = "body", rel = "", pos = Vector(-0.477, 5.955, -5.694), angle = Angle(0, 0, -90), size = Vector(1.195, 1.195, 1.195), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	["md_aimpoint"] = { type = "Model", model = "models/wystan/attachments/aimpoint.mdl", bone = "body", rel = "", pos = Vector(-0.454, 7.138, -7.909), angle = Angle(0, 0, -90), size = Vector(1.401, 1.401, 1.401), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+    ["md_pbs1"] = { type = "Model", model = "models/cw2/attachments/pbs1.mdl", bone = "body", rel = "", pos = Vector(0, 0.4, 18.128), angle = Angle(0, 0, 90), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+	["md_kobra"] = { type = "Model", model = "models/cw2/attachments/kobra.mdl", bone = "body", rel = "", pos = Vector(0.639, 5.118, 0.68), angle = Angle(180, 0, -90), size = Vector(0.907, 0.907, 0.907), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }	,
 
 
 
@@ -83,9 +80,8 @@ SWEP.LuaViewmodelRecoil = true
 SWEP.LuaViewmodelRecoilOverride = true
 SWEP.FullAimViewmodelRecoil = false
 
-SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -600}, atts = {"md_eotech", "md_aimpoint", "md_acog"}},
-    [2] = {header = "Muzzle", offset = {0, -350}, atts = {"md_saker"}},
-	[3] = {header = "Bottom Rail", offset = {0, 0}, atts = {"md_foregrip"}},
+SWEP.Attachments = {[1] = {header = "Sight", offset = {950, -600}, atts = {"md_kobra"}},
+    [2] = {header = "Muzzle", offset = {0, -350}, atts = {"md_pbs1"}},
 	["+reload"] = {header = "Ammo", offset = {900, 0}, atts = {"am_magnum", "am_matchgrade"}}}
 	
 
@@ -100,15 +96,13 @@ SWEP.Animations = {fire = "fire",
 	
 SWEP.Sounds = {draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
 
-	reload = {[1] = {time = 0.15, sound = "CW_QBZ03_MAGOUT"},
-	[2] = {time = 1.23, sound = "CW_QBZ03_MAGIN"},
-	[3] = {time = 1.30, sound = "CW_QBZ03_MAGHIT"}},
+	reload = {[1] = {time = 0.15, sound = "CW_AKS74U_MAGOUT"},
+	[2] = {time = 1.22, sound = "CW_AKS74U_MAGIN"}},
 	
-	reload_empty = {[1] = {time = 0.25, sound = "CW_QBZ03_MAGOUT"},
-	[2] = {time = 1.23, sound = "CW_QBZ03_MAGIN"},
-	[3] = {time = 1.30, sound = "CW_QBZ03_MAGHIT"},
-	[4] = {time = 2.21, sound = "CW_QBZ03_BOLTBACK"},
-	[5] = {time = 2.42, sound = "CW_QBZ03_BOLTFWD"}},
+	reload_empty = {[1] = {time = 0.15, sound = "CW_AKS74U_MAGOUT"},
+	[2] = {time = 1.22, sound = "CW_AKS74U_MAGIN"},
+	[3] = {time = 1.90, sound = "CW_AKS74U_BOLTBACK"},
+	[4] = {time = 2, sound = "CW_AKS74U_BOLTFWD"}},
 }
 
 SWEP.SpeedDec = 10
@@ -142,18 +136,18 @@ SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "smg1"
 
 SWEP.FireDelay = 0.09
-SWEP.FireSound = "CW_QBZ03_FIRE"
-SWEP.FireSoundSuppressed = "CW_QBZ03_FIRE_SUPPRESSED"
+SWEP.FireSound = "CW_AK7S74U_FIRE"
+SWEP.FireSoundSuppressed = "CW_AKS74U_FIRE_SUPPRESSED"
 SWEP.Recoil = 1.20
 
-SWEP.HipSpread = 0.060
-SWEP.AimSpread = 0.003
+SWEP.HipSpread = 0.040
+SWEP.AimSpread = 0.002
 SWEP.VelocitySensitivity = 1.8
 SWEP.MaxSpreadInc = 0.052
-SWEP.SpreadPerShot = 0.007
+SWEP.SpreadPerShot = 0.003
 SWEP.SpreadCooldown = 0.13
 SWEP.Shots = 1
-SWEP.Damage = 29
+SWEP.Damage = 23
 SWEP.DeployTime = 0.6
 
 SWEP.ReloadSpeed = 1
