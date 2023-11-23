@@ -105,11 +105,14 @@ SWEP.Sounds = {draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
 	[3] = {time = 1.30, sound = "CW_QBZ03_MAGHIT"}},
 	
 	reload_empty = {[1] = {time = 0.25, sound = "CW_QBZ03_MAGOUT"},
-	[2] = {time = 1.23, sound = "CW_QBZ03_MAGIN"},
-	[3] = {time = 1.30, sound = "CW_QBZ03_MAGHIT"},
-	[4] = {time = 2.21, sound = "CW_QBZ03_BOLTBACK"},
-	[5] = {time = 2.42, sound = "CW_QBZ03_BOLTFWD"}},
+	[2] = {time = 0.70, sound = "CW_QBZ03_MAGDROP"},
+	[3] = {time = 1.23, sound = "CW_QBZ03_MAGIN"},
+	[4] = {time = 1.30, sound = "CW_QBZ03_MAGHIT"},
+	[5] = {time = 2.21, sound = "CW_QBZ03_BOLTBACK"},
+	[6] = {time = 2.42, sound = "CW_QBZ03_BOLTFWD"}},
 }
+
+
 
 SWEP.SpeedDec = 10
 

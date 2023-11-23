@@ -5,8 +5,8 @@ include("sh_sounds.lua")
 if CLIENT then
     SWEP.UseHands = true
 	
-	SWEP.SelectIcon = surface.GetTextureID("vgui/entities/cwr_qbz03")
-	killicon.Add( "cwr_aks74u", "vgui/entities/cwr_qbz03", Color(255, 0, 0, 0))
+	SWEP.SelectIcon = surface.GetTextureID("vgui/entities/cwr_aks74u")
+	killicon.Add( "cwr_aks74u", "vgui/entities/cwr_aks74u", Color(255, 0, 0, 0))
 	SWEP.DrawCrosshair = false
 	SWEP.PrintName = "AKS74U"
 	SWEP.CSMuzzleFlashes = true
@@ -20,7 +20,7 @@ if CLIENT then
 	SWEP.MuzzleEffect = "muzzleflash_6"
 	SWEP.PosBasedMuz = false
 	SWEP.Shell = "rifleshell"
-	SWEP.ShellScale = 1
+	SWEP.ShellScale = 0.5
 	SWEP.ShellOffsetMul = 0
 	SWEP.ShellPosOffset = {x = 0, y = 0, z = 0}
 
